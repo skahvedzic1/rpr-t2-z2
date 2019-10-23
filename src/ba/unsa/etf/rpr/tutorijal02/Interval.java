@@ -1,10 +1,13 @@
 package ba.unsa.etf.rpr.tutorijal02;
 
+
 public class Interval {
      double pocetna_tacka,krajnja_tacka;
      boolean pripada_pocetna,pripada_krajnja;
 
      Interval(double pt, double kt, boolean pp,boolean pk) {
+
+         if(pocetna_tacka>krajnja_tacka) throw new IllegalAccessException("Pocetna tacka veca od krajnje!");
          pocetna_tacka=pt;
          krajnja_tacka=kt;
          pripada_pocetna=pp;
